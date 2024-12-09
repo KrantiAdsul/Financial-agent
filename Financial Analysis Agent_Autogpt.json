@@ -1,0 +1,577 @@
+{
+  "id": "271c84d0-175f-4f91-8296-baeecdb26c86",
+  "version": 20,
+  "is_active": true,
+  "is_template": false,
+  "name": "Financial Analysis Agent: Your Personalized Financial Insights Tool",
+  "description": "**Disclaimer: The information provided by this agent is for informational purposes only and should not be considered financial advice. Please consult a licensed financial professional for personalized advice.**\n\nThe Financial Analysis Agent is a comprehensive digital solution designed to provide personalized financial insights to users. This agent specializes in analyzing your financial data—including income, expenses, and available capital—to offer tailored suggestions that help you work towards your financial objectives.\n\n**Value Delivered:**\n1. **Personalized Financial Insights**: The agent provides customized insights based on your individual needs and circumstances. By carefully analyzing your financial situation, it offers actionable suggestions to help you optimize your income, manage expenses, and make informed financial decisions.\n\n2. **Comprehensive Analysis**: With an in-depth review of income and expenditure, the agent highlights areas for potential improvement, helping users make informed decisions about their financial situation. It aims to provide efficient use of capital to support your financial objectives.\n\n3. **Investment Considerations**: The agent identifies potential investment opportunities that align with your risk tolerance and financial objectives. However, any final decisions should be made in consultation with a qualified financial advisor.\n\n4. **Goal-Oriented Approach**: Focused on your stated financial goals, the agent provides a clear outline of strategies and tactics that could help you work towards achieving financial success.",
+  "executions": [
+    {
+      "id": "47b6be7b-77cf-4cc9-b1c8-2337028f0d1e",
+      "execution_id": "47b6be7b-77cf-4cc9-b1c8-2337028f0d1e",
+      "started_at": "2024-12-09T04:44:53.857000Z",
+      "ended_at": "2024-12-09T04:45:13.406000Z",
+      "duration": 19.416231632232666,
+      "total_run_time": 16.18910837173462,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "98d34dd2-49a7-4be8-b1ba-0fb2483b4ba9",
+      "execution_id": "98d34dd2-49a7-4be8-b1ba-0fb2483b4ba9",
+      "started_at": "2024-12-09T05:42:20.798000Z",
+      "ended_at": "2024-12-09T05:42:33.422000Z",
+      "duration": 12.527296781539917,
+      "total_run_time": 9.196892261505127,
+      "status": "COMPLETED"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "d3254284-e685-461c-b3b7-ad25bee23544",
+      "block_id": "31d1064e-7446-4693-a7d4-65e5ca1180d1",
+      "input_default": {
+        "key": "income"
+      },
+      "metadata": {
+        "position": {
+          "x": 877.350070306956,
+          "y": 93.79000505901234
+        }
+      },
+      "input_links": [
+        {
+          "id": "01ac8fb5-425f-492c-8227-5d6daf3012cf",
+          "source_id": "10e42ae5-4312-481c-86a5-c125c46361e5",
+          "sink_id": "d3254284-e685-461c-b3b7-ad25bee23544",
+          "source_name": "updated_dictionary",
+          "sink_name": "dictionary",
+          "is_static": false
+        },
+        {
+          "id": "8d73d193-a933-4c17-ab76-d05fb4b55290",
+          "source_id": "90f759aa-764e-4c35-b28b-6783aaf11abd",
+          "sink_id": "d3254284-e685-461c-b3b7-ad25bee23544",
+          "source_name": "result",
+          "sink_name": "value",
+          "is_static": true
+        }
+      ],
+      "output_links": [
+        {
+          "id": "9af957c5-6f4c-4405-8eda-bd23bf6a7748",
+          "source_id": "d3254284-e685-461c-b3b7-ad25bee23544",
+          "sink_id": "e7b11bf2-03d8-410f-b355-2fad5738006f",
+          "source_name": "updated_dictionary",
+          "sink_name": "dictionary",
+          "is_static": false
+        }
+      ],
+      "webhook_id": null
+    },
+    {
+      "id": "db6946a1-978e-497d-b345-d35cb0cfdd0e",
+      "block_id": "c0a8e994-ebf1-4a9c-a4d8-89d09c86741b",
+      "input_default": {
+        "name": "Goal",
+        "value": "I want to maximise the passive income I can gain from my investment capital",
+        "description": "What are your financial goals?"
+      },
+      "metadata": {
+        "position": {
+          "x": 175.43249130331668,
+          "y": 790.7562658250306
+        }
+      },
+      "input_links": [],
+      "output_links": [
+        {
+          "id": "9be109f3-2a3e-4933-a0e2-a0b7eaa53dca",
+          "source_id": "db6946a1-978e-497d-b345-d35cb0cfdd0e",
+          "sink_id": "37c4711d-9371-4342-9572-16b11ecc8fb6",
+          "source_name": "result",
+          "sink_name": "value",
+          "is_static": true
+        }
+      ],
+      "webhook_id": null
+    },
+    {
+      "id": "10e42ae5-4312-481c-86a5-c125c46361e5",
+      "block_id": "31d1064e-7446-4693-a7d4-65e5ca1180d1",
+      "input_default": {
+        "key": "country"
+      },
+      "metadata": {
+        "position": {
+          "x": 887.9593439638224,
+          "y": -447.6344871552005
+        }
+      },
+      "input_links": [
+        {
+          "id": "dc070cf7-3a8e-4937-82a6-104a6468270b",
+          "source_id": "aa014f18-ee35-441c-a7ca-f46456e2e5ed",
+          "sink_id": "10e42ae5-4312-481c-86a5-c125c46361e5",
+          "source_name": "result",
+          "sink_name": "value",
+          "is_static": true
+        }
+      ],
+      "output_links": [
+        {
+          "id": "01ac8fb5-425f-492c-8227-5d6daf3012cf",
+          "source_id": "10e42ae5-4312-481c-86a5-c125c46361e5",
+          "sink_id": "d3254284-e685-461c-b3b7-ad25bee23544",
+          "source_name": "updated_dictionary",
+          "sink_name": "dictionary",
+          "is_static": false
+        }
+      ],
+      "webhook_id": null
+    },
+    {
+      "id": "e7b11bf2-03d8-410f-b355-2fad5738006f",
+      "block_id": "31d1064e-7446-4693-a7d4-65e5ca1180d1",
+      "input_default": {
+        "key": "expenses"
+      },
+      "metadata": {
+        "position": {
+          "x": 878.495446124934,
+          "y": 500.2646877565711
+        }
+      },
+      "input_links": [
+        {
+          "id": "9af957c5-6f4c-4405-8eda-bd23bf6a7748",
+          "source_id": "d3254284-e685-461c-b3b7-ad25bee23544",
+          "sink_id": "e7b11bf2-03d8-410f-b355-2fad5738006f",
+          "source_name": "updated_dictionary",
+          "sink_name": "dictionary",
+          "is_static": false
+        },
+        {
+          "id": "4ad460b8-b6f0-4bcc-862a-940158ca84c8",
+          "source_id": "5c60d8b2-4e4b-4875-a372-5bca06f5d3ea",
+          "sink_id": "e7b11bf2-03d8-410f-b355-2fad5738006f",
+          "source_name": "result",
+          "sink_name": "value",
+          "is_static": true
+        }
+      ],
+      "output_links": [
+        {
+          "id": "19f1d235-e33e-4346-b49c-d2860677f359",
+          "source_id": "e7b11bf2-03d8-410f-b355-2fad5738006f",
+          "sink_id": "37c4711d-9371-4342-9572-16b11ecc8fb6",
+          "source_name": "updated_dictionary",
+          "sink_name": "dictionary",
+          "is_static": false
+        }
+      ],
+      "webhook_id": null
+    },
+    {
+      "id": "90f759aa-764e-4c35-b28b-6783aaf11abd",
+      "block_id": "c0a8e994-ebf1-4a9c-a4d8-89d09c86741b",
+      "input_default": {
+        "name": "Income",
+        "value": "100000",
+        "description": "What is you annual income in your local currency?"
+      },
+      "metadata": {
+        "position": {
+          "x": 171.2942539715716,
+          "y": -30.512927444086387
+        }
+      },
+      "input_links": [],
+      "output_links": [
+        {
+          "id": "8d73d193-a933-4c17-ab76-d05fb4b55290",
+          "source_id": "90f759aa-764e-4c35-b28b-6783aaf11abd",
+          "sink_id": "d3254284-e685-461c-b3b7-ad25bee23544",
+          "source_name": "result",
+          "sink_name": "value",
+          "is_static": true
+        }
+      ],
+      "webhook_id": null
+    },
+    {
+      "id": "5f11e722-3b2b-4017-a15a-d64c1c0eac0b",
+      "block_id": "db7d8f02-2f44-4c55-ab7a-eae0941f0c30",
+      "input_default": {
+        "format": "Financial Analyst Briefing:\n\nStudent's Country: {{ country }}\n\nStudent's Financial Goal: {{ goal }}\n\nCurrent Capital Available for Investment: {{ capital }}\n\nIncome and Expenses Summary:\n- Income: {{ income }}\n- Expenses: {{ expenses }}\n\nAdvisor Notes:\nThe student aims to achieve the above financial goal with their current capital. Please evaluate their income and expense structure to recommend an optimal strategy for reaching their goal. Focus on ways to maximize the student's investment potential while considering their current financial standing. \n\nEnsure that their expenses are manageable and provide actionable steps to help them achieve better savings or investment returns to align with their goal.\n\nGive clear advise on specifically what there investment capital could be invested in to help them achieve there goals. Consider stocks, savings accounts, gold, crypto, pension funds and every other possible investment."
+      },
+      "metadata": {
+        "position": {
+          "x": 1695.5805808682992,
+          "y": 918.2363585019502
+        }
+      },
+      "input_links": [
+        {
+          "id": "0376dd0f-8e02-4640-b6fb-9fbf9b006ab0",
+          "source_id": "37c4711d-9371-4342-9572-16b11ecc8fb6",
+          "sink_id": "5f11e722-3b2b-4017-a15a-d64c1c0eac0b",
+          "source_name": "updated_dictionary",
+          "sink_name": "values",
+          "is_static": false
+        }
+      ],
+      "output_links": [
+        {
+          "id": "af1e9ba1-f60d-40c9-b567-4bdb72820886",
+          "source_id": "5f11e722-3b2b-4017-a15a-d64c1c0eac0b",
+          "sink_id": "25b12b91-55c9-45cb-a0a3-dc8669660751",
+          "source_name": "output",
+          "sink_name": "prompt",
+          "is_static": false
+        },
+        {
+          "id": "7c146122-b536-4804-a541-7118d996d7b1",
+          "source_id": "5f11e722-3b2b-4017-a15a-d64c1c0eac0b",
+          "sink_id": "0dc3cbc9-4e84-45f9-8a07-8599b9785b42",
+          "source_name": "output",
+          "sink_name": "value",
+          "is_static": false
+        }
+      ],
+      "webhook_id": null
+    },
+    {
+      "id": "0dc3cbc9-4e84-45f9-8a07-8599b9785b42",
+      "block_id": "363ae599-353e-4804-937e-b2ee3cef3da4",
+      "input_default": {
+        "name": "Your Situation",
+        "description": "Explanation of your current situation"
+      },
+      "metadata": {
+        "position": {
+          "x": 2329.1625219291186,
+          "y": 246.15455183835888
+        }
+      },
+      "input_links": [
+        {
+          "id": "7c146122-b536-4804-a541-7118d996d7b1",
+          "source_id": "5f11e722-3b2b-4017-a15a-d64c1c0eac0b",
+          "sink_id": "0dc3cbc9-4e84-45f9-8a07-8599b9785b42",
+          "source_name": "output",
+          "sink_name": "value",
+          "is_static": false
+        }
+      ],
+      "output_links": [],
+      "webhook_id": null
+    },
+    {
+      "id": "5c60d8b2-4e4b-4875-a372-5bca06f5d3ea",
+      "block_id": "c0a8e994-ebf1-4a9c-a4d8-89d09c86741b",
+      "input_default": {
+        "name": "Expenses",
+        "value": "50000",
+        "description": "What's your current fixed expenses?"
+      },
+      "metadata": {
+        "position": {
+          "x": 180.77722789594975,
+          "y": 384.2712961685803
+        }
+      },
+      "input_links": [],
+      "output_links": [
+        {
+          "id": "4ad460b8-b6f0-4bcc-862a-940158ca84c8",
+          "source_id": "5c60d8b2-4e4b-4875-a372-5bca06f5d3ea",
+          "sink_id": "e7b11bf2-03d8-410f-b355-2fad5738006f",
+          "source_name": "result",
+          "sink_name": "value",
+          "is_static": true
+        }
+      ],
+      "webhook_id": null
+    },
+    {
+      "id": "98394cee-c1d0-49fd-902e-536827de64fd",
+      "block_id": "363ae599-353e-4804-937e-b2ee3cef3da4",
+      "input_default": {
+        "name": "Advice"
+      },
+      "metadata": {
+        "position": {
+          "x": 3602.8444172800655,
+          "y": 978.6324183976058
+        }
+      },
+      "input_links": [
+        {
+          "id": "34700df5-8711-43e1-bd13-7c96da6edb46",
+          "source_id": "25b12b91-55c9-45cb-a0a3-dc8669660751",
+          "sink_id": "98394cee-c1d0-49fd-902e-536827de64fd",
+          "source_name": "response",
+          "sink_name": "value",
+          "is_static": false
+        }
+      ],
+      "output_links": [],
+      "webhook_id": null
+    },
+    {
+      "id": "25b12b91-55c9-45cb-a0a3-dc8669660751",
+      "block_id": "1f292d4a-41a4-4977-9684-7c8d560b9f91",
+      "input_default": {
+        "model": "gpt-4o",
+        "credentials": {
+          "id": "1d380b3c-88a7-4758-96b6-e32353b769d3",
+          "title": "GPT_key",
+          "provider": "openai",
+          "type": "api_key"
+        },
+        "sys_prompt": "Instructions for Financial Analyst:  Scope of Work: - Analyze the client's current financial situation based on the provided briefing. - Develop a comprehensive financial plan to help the client achieve their stated financial goal. - Provide recommendations on investment strategies utilizing the client's available capital. - Assess the client's income and expenses to identify opportunities for increasing savings or reducing costs.  Considerations: - Take into account the economic conditions and financial regulations specific to {{ country }}. - Consider the client's risk tolerance and investment preferences when proposing strategies. - Ensure that any recommendations are compliant with legal and ethical standards within the financial industry. - Factor in any potential tax implications related to investment or financial planning.  Expected Outputs: - A detailed financial plan outlining steps to achieve the client's goal. - An analysis report of the client's current financial health, including strengths and areas for improvement. - Specific recommendations for investment opportunities suitable for the client's capital and goals. - Actionable advice on managing income and expenses to enhance savings potential.  Please ensure that all advice is tailored to the client's unique situation and aligns with their financial objectives.",
+        "prompt_values": {}
+      },
+      "metadata": {
+        "position": {
+          "x": 2415.719369966296,
+          "y": 1348.2399127545737
+        }
+      },
+      "input_links": [
+        {
+          "id": "af1e9ba1-f60d-40c9-b567-4bdb72820886",
+          "source_id": "5f11e722-3b2b-4017-a15a-d64c1c0eac0b",
+          "sink_id": "25b12b91-55c9-45cb-a0a3-dc8669660751",
+          "source_name": "output",
+          "sink_name": "prompt",
+          "is_static": false
+        }
+      ],
+      "output_links": [
+        {
+          "id": "34700df5-8711-43e1-bd13-7c96da6edb46",
+          "source_id": "25b12b91-55c9-45cb-a0a3-dc8669660751",
+          "sink_id": "98394cee-c1d0-49fd-902e-536827de64fd",
+          "source_name": "response",
+          "sink_name": "value",
+          "is_static": false
+        }
+      ],
+      "webhook_id": null
+    },
+    {
+      "id": "aa014f18-ee35-441c-a7ca-f46456e2e5ed",
+      "block_id": "c0a8e994-ebf1-4a9c-a4d8-89d09c86741b",
+      "input_default": {
+        "name": "Country",
+        "value": "United States",
+        "description": "What Country do you live in?"
+      },
+      "metadata": {
+        "position": {
+          "x": 168.72576263452936,
+          "y": -436.53322204035607
+        }
+      },
+      "input_links": [],
+      "output_links": [
+        {
+          "id": "dc070cf7-3a8e-4937-82a6-104a6468270b",
+          "source_id": "aa014f18-ee35-441c-a7ca-f46456e2e5ed",
+          "sink_id": "10e42ae5-4312-481c-86a5-c125c46361e5",
+          "source_name": "result",
+          "sink_name": "value",
+          "is_static": true
+        }
+      ],
+      "webhook_id": null
+    },
+    {
+      "id": "37c4711d-9371-4342-9572-16b11ecc8fb6",
+      "block_id": "31d1064e-7446-4693-a7d4-65e5ca1180d1",
+      "input_default": {
+        "key": "goal"
+      },
+      "metadata": {
+        "position": {
+          "x": 883.7556183263616,
+          "y": 1275.144680543553
+        }
+      },
+      "input_links": [
+        {
+          "id": "9be109f3-2a3e-4933-a0e2-a0b7eaa53dca",
+          "source_id": "db6946a1-978e-497d-b345-d35cb0cfdd0e",
+          "sink_id": "37c4711d-9371-4342-9572-16b11ecc8fb6",
+          "source_name": "result",
+          "sink_name": "value",
+          "is_static": true
+        },
+        {
+          "id": "19f1d235-e33e-4346-b49c-d2860677f359",
+          "source_id": "e7b11bf2-03d8-410f-b355-2fad5738006f",
+          "sink_id": "37c4711d-9371-4342-9572-16b11ecc8fb6",
+          "source_name": "updated_dictionary",
+          "sink_name": "dictionary",
+          "is_static": false
+        }
+      ],
+      "output_links": [
+        {
+          "id": "0376dd0f-8e02-4640-b6fb-9fbf9b006ab0",
+          "source_id": "37c4711d-9371-4342-9572-16b11ecc8fb6",
+          "sink_id": "5f11e722-3b2b-4017-a15a-d64c1c0eac0b",
+          "source_name": "updated_dictionary",
+          "sink_name": "values",
+          "is_static": false
+        }
+      ],
+      "webhook_id": null
+    }
+  ],
+  "links": [
+    {
+      "id": "dc070cf7-3a8e-4937-82a6-104a6468270b",
+      "source_id": "aa014f18-ee35-441c-a7ca-f46456e2e5ed",
+      "sink_id": "10e42ae5-4312-481c-86a5-c125c46361e5",
+      "source_name": "result",
+      "sink_name": "value",
+      "is_static": true
+    },
+    {
+      "id": "8d73d193-a933-4c17-ab76-d05fb4b55290",
+      "source_id": "90f759aa-764e-4c35-b28b-6783aaf11abd",
+      "sink_id": "d3254284-e685-461c-b3b7-ad25bee23544",
+      "source_name": "result",
+      "sink_name": "value",
+      "is_static": true
+    },
+    {
+      "id": "9af957c5-6f4c-4405-8eda-bd23bf6a7748",
+      "source_id": "d3254284-e685-461c-b3b7-ad25bee23544",
+      "sink_id": "e7b11bf2-03d8-410f-b355-2fad5738006f",
+      "source_name": "updated_dictionary",
+      "sink_name": "dictionary",
+      "is_static": false
+    },
+    {
+      "id": "19f1d235-e33e-4346-b49c-d2860677f359",
+      "source_id": "e7b11bf2-03d8-410f-b355-2fad5738006f",
+      "sink_id": "37c4711d-9371-4342-9572-16b11ecc8fb6",
+      "source_name": "updated_dictionary",
+      "sink_name": "dictionary",
+      "is_static": false
+    },
+    {
+      "id": "7c146122-b536-4804-a541-7118d996d7b1",
+      "source_id": "5f11e722-3b2b-4017-a15a-d64c1c0eac0b",
+      "sink_id": "0dc3cbc9-4e84-45f9-8a07-8599b9785b42",
+      "source_name": "output",
+      "sink_name": "value",
+      "is_static": false
+    },
+    {
+      "id": "01ac8fb5-425f-492c-8227-5d6daf3012cf",
+      "source_id": "10e42ae5-4312-481c-86a5-c125c46361e5",
+      "sink_id": "d3254284-e685-461c-b3b7-ad25bee23544",
+      "source_name": "updated_dictionary",
+      "sink_name": "dictionary",
+      "is_static": false
+    },
+    {
+      "id": "34700df5-8711-43e1-bd13-7c96da6edb46",
+      "source_id": "25b12b91-55c9-45cb-a0a3-dc8669660751",
+      "sink_id": "98394cee-c1d0-49fd-902e-536827de64fd",
+      "source_name": "response",
+      "sink_name": "value",
+      "is_static": false
+    },
+    {
+      "id": "9be109f3-2a3e-4933-a0e2-a0b7eaa53dca",
+      "source_id": "db6946a1-978e-497d-b345-d35cb0cfdd0e",
+      "sink_id": "37c4711d-9371-4342-9572-16b11ecc8fb6",
+      "source_name": "result",
+      "sink_name": "value",
+      "is_static": true
+    },
+    {
+      "id": "4ad460b8-b6f0-4bcc-862a-940158ca84c8",
+      "source_id": "5c60d8b2-4e4b-4875-a372-5bca06f5d3ea",
+      "sink_id": "e7b11bf2-03d8-410f-b355-2fad5738006f",
+      "source_name": "result",
+      "sink_name": "value",
+      "is_static": true
+    },
+    {
+      "id": "af1e9ba1-f60d-40c9-b567-4bdb72820886",
+      "source_id": "5f11e722-3b2b-4017-a15a-d64c1c0eac0b",
+      "sink_id": "25b12b91-55c9-45cb-a0a3-dc8669660751",
+      "source_name": "output",
+      "sink_name": "prompt",
+      "is_static": false
+    },
+    {
+      "id": "0376dd0f-8e02-4640-b6fb-9fbf9b006ab0",
+      "source_id": "37c4711d-9371-4342-9572-16b11ecc8fb6",
+      "sink_id": "5f11e722-3b2b-4017-a15a-d64c1c0eac0b",
+      "source_name": "updated_dictionary",
+      "sink_name": "values",
+      "is_static": false
+    }
+  ],
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "Goal": {
+        "secret": false,
+        "advanced": false,
+        "title": "Goal",
+        "description": "What are your financial goals?",
+        "default": "I want to maximise the passive income I can gain from my investment capital"
+      },
+      "Income": {
+        "secret": false,
+        "advanced": false,
+        "title": "Income",
+        "description": "What is you annual income in your local currency?",
+        "default": "100000"
+      },
+      "Expenses": {
+        "secret": false,
+        "advanced": false,
+        "title": "Expenses",
+        "description": "What's your current fixed expenses?",
+        "default": "50000"
+      },
+      "Country": {
+        "secret": false,
+        "advanced": false,
+        "title": "Country",
+        "description": "What Country do you live in?",
+        "default": "United States"
+      }
+    },
+    "required": []
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "Your Situation": {
+        "secret": false,
+        "advanced": false,
+        "title": "Your Situation",
+        "description": "Explanation of your current situation"
+      },
+      "Advice": {
+        "secret": false,
+        "advanced": false,
+        "title": "Advice"
+      }
+    },
+    "required": [
+      "Your Situation",
+      "Advice"
+    ]
+  }
+}
